@@ -61,3 +61,14 @@ CMD [ "npm", "start" ]
 
 ```
 </details>
+
+```
+# To create a non root group and user inside your Alpine based Dockerfile
+
+# -g is the GID
+addgroup -g 1000 groupname
+
+# -u is the UID
+# -D permits to create an user without password
+adduser -u 1000 -G groupname -h /home/username -D username
+```
